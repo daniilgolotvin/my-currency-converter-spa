@@ -1,4 +1,4 @@
-# my-currency-converter-spa
+# [my-currency-converter-spa](https://daniilgolotvin.github.io/my-currency-converter-spa/)
 Тестовое задание для Front-End разработчиков.
 Задание: SPA для конвертирования валют
 Написать SPA для конвертирования валют. В приложении должен быть хедер и 2 страницы:
