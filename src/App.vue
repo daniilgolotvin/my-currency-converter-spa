@@ -1,17 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <Header @currency-changed="handleCurrencyChange" />
+    <router-view :key="currentBaseCurrency" :baseCurrency="currentBaseCurrency" />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/AppHeader.vue'
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    Header
+  },
+  data() {
+    return {
+      currentBaseCurrency: 'rub'
+    };
+  },
+  methods: {
+    handleCurrencyChange(newCurrency) {
+      this.currentBaseCurrency = newCurrency;
+    }
   }
-}
+};
 </script>
 
 <style>
